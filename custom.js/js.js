@@ -3,6 +3,19 @@ let value;
 num=""
 let display = document.getElementById("display");
 
+
+function check(num){
+    len=num.length
+    for(let i=0;i<len-1;i++){
+        if (isNaN(num[0]) || isNaN(num[len+1])){
+            display.innerHTML ="Wrong Input";
+        }else if (isNaN(num[i])) {
+            display.innerHTML ="Wrong Input 2";
+        }
+    
+    } 
+}
+
 let myevent= document.addEventListener("click", function(e){
     value =e.target.innerText
     // return value
@@ -11,11 +24,21 @@ let myevent= document.addEventListener("click", function(e){
         console.log(num);
         console.log(eval(num));
         display.innerHTML=eval(num)
-        num=""
+        num=eval(num)
     }
     else if(value =="x"){
         num+="*";
         display.innerHTML=num
+    }
+    else if(value =="B"){
+        num = num.toString();
+        num=num.slice(0,num.length-1);
+        display.innerHTML=num
+    }
+    else if(value=="C"){
+        num=""
+        display.innerHTML=num
+
     }
     else{
         num+=value;
@@ -24,48 +47,4 @@ let myevent= document.addEventListener("click", function(e){
     
 },false)
 
-function check(num){
 
-    for(let i=0;i<num.length;i++){
-        console.log["h"]
-    }
-    
-}
-
-
-
-// while (count<5){
-//     count+=1;
-//     console.log( myevent());
-// }
-
-
-// console.log("uuu");
-// while (false){
-//     if (isNaN(value)){
-//         if (value==='x'){
-//             // let multiply();
-//             console.log("m");
-//         }
-//         else if (value==='+'){
-//             // let add();
-//             console.log("a");
-//         }
-//         else if (value==='-'){
-//             // let minus();
-//             console.log("s");
-//         }
-//         else{
-//             // let divide();
-//             console.log("d");
-//         }
-        
-
-// }
-// else{
-//     console.log(value);
-    
-// }
-// }
-
-        
