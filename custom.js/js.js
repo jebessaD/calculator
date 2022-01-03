@@ -18,11 +18,8 @@ function check(num){
 
 let myevent= document.addEventListener("click", function(e){
     value =e.target.innerText
-    // return value
     if (value=="="){
         check(num)
-        console.log(num);
-        console.log(eval(num));
         display.innerHTML=eval(num)
         num=eval(num)
     }
@@ -44,10 +41,7 @@ let myevent= document.addEventListener("click", function(e){
         num+=value;
         display.innerHTML=num
     }
-    // else(
-    //     display.innerHTML=num
-    // )
-    
+
 },false)
 
 
