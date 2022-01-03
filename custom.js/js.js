@@ -40,7 +40,7 @@ let myevent= document.addEventListener("click", function(e){
         display.innerHTML=num
 
     }
-    else if(isNaN(value)==false ||  value== "+" || value== "/" || value== "-"){
+    else if(isNaN(value)==false ||  value== "+" || value== "/" || value== "-" || value== "%"){
         num+=value;
         display.innerHTML=num
     }
